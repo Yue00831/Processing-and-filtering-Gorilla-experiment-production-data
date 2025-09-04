@@ -1,0 +1,11 @@
+Direct sound files provided by Gorilla is in webm file formatting. But if you want to click and listen, it's better to transform them to mp3 or wav files.
+
+Step1: open your terminal
+Step2: click "info" on your targeting webm sound files and get "path"
+Step3: copy that path to your terminal, by tapping "cd + path"
+Step4: copy and past the code below and hit enter [you should see all the sounds files being transformed right now]
+
+#code
+for file in *.webm; do
+    ffmpeg -i "$file" "${file%.webm}.mp3" #change "mp3" to "wav" if you need wav format
+done
